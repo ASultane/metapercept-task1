@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ course.title }}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="course-detail">
+        <h1>{{ course.title }}</h1>
+        <img src="{{ course.image.url }}" alt="{{ course.title }}">
+        <p>{{ course.description }}</p>
+        <a href="{% url 'course_list' %}" class="btn">Back to Courses</a>
+    </section>
+    <footer>
+        <p>&copy; 2021. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #f8f8f8;
+    padding: 10px 20px;
+    text-align: right;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.hero {
+    background: linear-gradient(90deg, #007CF0, #00DFD8);
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+}
+
+.hero .btn {
+    background: white;
+    color: #007CF0;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.courses {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.course-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.course-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.course-card h3 {
+    font-size: 1.5em;
+    margin: 20px 0 10px;
+}
+
+.course-card p {
+    font-size: 1em;
+    color: #666;
+}
+
+.course-card .btn {
+    background: #007CF0;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+footer {
+    background: #f8f8f8;
+    padding: 10px 20px;
+    text-align: center;
+    margin-top: 2rem;
+}

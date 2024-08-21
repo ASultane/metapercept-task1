@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="{% url 'blog' %}">Blog</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+            </ul>
+            <a href="#" class="btn">Sign Up</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Title</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas risus mi, egestas et imperdiet quis, tristique non mi.</p>
+        <a href="#" class="btn">Read More</a>
+    </section>
+
+    <section class="courses">
+        <h2>Classes</h2>
+        <div class="course-grid">
+            {% for course in courses %}
+                <div class="course-card">
+                    <div class="course-image-placeholder">
+                        ADD IMAGE
+                    </div>
+                    <h3>{{ course.title }}</h3>
+                    <p>{{ course.description|truncatewords:20 }}</p>
+                    <a href="{% url 'course_detail' course.pk %}" class="btn">View</a>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024. All Rights Reserved.</p>
+        <a href="#">Back to top</a>
+    </footer>
+</body>
+</html>
